@@ -1,9 +1,9 @@
 Copyright (c) 2015, Robert A. Canfield. All rights reserved.
-                    Virginia Tech and Air Force Institute of Technology
+              2020  Virginia Tech and Air Force Institute of Technology
                     bob.canfield@vt.edu
                    <http://www.aoe.vt.edu/people/faculty/canfield.html>
 
-sqp.m, slp_trust.m MATLAB package
+sqp.m MATLAB package
 ---------------------------------
 University of Illinois/NCSA Open Source License
 

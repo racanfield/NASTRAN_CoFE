@@ -46,6 +46,7 @@ classdef cbeam < structure & plot1D
         strain % [8 x nm x 2] element longitudinal and transverse strains [[C1 D1 E1 F1 C2 D2 E2 F2] x nm x 2], where strain(:,:,1) are longitudinal strains and strain(:,:,2) are transverse strains
         eke % [nm x 1] Element modal kinetic energy
         ese % [nm x 1] Element static or modal strain energy
+        vol % [nm x 1] Element volume. rac (5/26/20)
     end
     properties (Dependent=true)
         voigtStress % [6 x nm x 8] Matrix of stress vectors in Voigt notation [[s11 s22 s33 s23 s13 s12]' x nm x [C1 D1 E1 F1 C2 D2 E2 F2]], where nm is the number of response modes.

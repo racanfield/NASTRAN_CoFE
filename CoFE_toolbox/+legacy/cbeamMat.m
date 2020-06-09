@@ -23,9 +23,10 @@
 % % Components of differential stiffness matrix (all in global frame)
 % kdxx_g = [12 x 12] element differential stiffness matrix
 %
-function [R,ke_g,me_g,kdp_g,kdvy_g,kdvz_g,kdmy2_g,kdmz2_g,kdmx_g] = cbeamMat(p1,p2,nuVec,E,G,A,Iy,Iz,J,rho,NSM,K1,K2)
+function [R,ke_g,me_g,kdp_g,kdvy_g,kdvz_g,kdmy2_g,kdmz2_g,kdmx_g,V] = cbeamMat(p1,p2,nuVec,E,G,A,Iy,Iz,J,rho,NSM,K1,K2)
 
 L = norm_cs(p2-p1); % norm(p2-p1) is not complex step friendly % sqrt( (p2(1)-p1(1)).^2 + (p2(2)-p1(2)).^2 + (p2(3)-p1(3)).^2 ); 
+V = A*L; % rac (5/26/20)
 %% Direction Cosine Matrix
 xVec = p2 - p1; xVec = xVec./norm_cs(xVec);
 % cross() is more expensive than is should be.  Use specific version for 3x3

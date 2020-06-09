@@ -47,7 +47,7 @@ nuVec = [obj.X1;obj.X2;obj.X3];
 if any([FEM.CASE.SOL] == 105)
     [obj.R,obj.ke,obj.me,obj.kdp,obj.kdvy,obj.kdvz,obj.kdmy2,obj.kdmz2,obj.kdmx] = legacy.cbeamMat(obj.x1,obj.x2,nuVec,E,G,obj_pbeam.A,obj_pbeam.I2,obj_pbeam.I1,obj_pbeam.J,obj_mat1.RHO,obj_pbeam.NSM,obj_pbeam.K1,obj_pbeam.K2);
 else
-    [obj.R,obj.ke,obj.me] = legacy.cbeamMat(obj.x1,obj.x2,nuVec,E,G,obj_pbeam.A,obj_pbeam.I2,obj_pbeam.I1,obj_pbeam.J,obj_mat1.RHO,obj_pbeam.NSM,obj_pbeam.K1,obj_pbeam.K2);
+    [obj.R,obj.ke,obj.me,~,~,~,~,~,~,obj.vol] = legacy.cbeamMat(obj.x1,obj.x2,nuVec,E,G,obj_pbeam.A,obj_pbeam.I2,obj_pbeam.I1,obj_pbeam.J,obj_mat1.RHO,obj_pbeam.NSM,obj_pbeam.K1,obj_pbeam.K2);
 end
 
 % force-stress matrix
